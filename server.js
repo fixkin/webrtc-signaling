@@ -13,7 +13,7 @@ const wss = new WebSocketServer({ noServer: true });
 
 wss.on('connection', (ws, req) => {
   // Genera un ID unico per il client
-  const id = Math.random().toString(36).substr(2, 9);
+  const id = Math.random().toString(36).substr(2, 6);
   clients.set(id, ws);
   console.log(`Client connesso: ${id}`);
 
